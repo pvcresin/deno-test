@@ -25,6 +25,9 @@ const app = new Application();
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-console.log("http://localhost:8000/");
+// fly.io port
+const port = 8080;
 
-await app.listen({ port: 8000 });
+console.log(`http://localhost:${port}/`);
+
+await app.listen({ port });
