@@ -11,7 +11,7 @@ RUN apk add --no-cache --virtual .installdeps curl unzip && \
 
 COPY . .
 
-RUN deno install oak.ts
+RUN deno cache oak.ts
 
 EXPOSE 8000
 CMD ["deno", "run", "--allow-net", "oak.ts"]
